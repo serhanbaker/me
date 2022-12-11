@@ -34,7 +34,7 @@ It is not clear to me why we wouldn't aggregate the volumes of 10_000 and 500 on
 
 So, this is the output from my implementation for the same input:
 ```
-Bid #		|		Price       |	Ask #
+Bid #		|         Price           |     Ask #
 0		|	103.0             |     100
 0		|	105.0             |     20000
 0		|	100.0             |     10500
