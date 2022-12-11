@@ -10,7 +10,7 @@ This means, we insert orders that don't have any match at the end of the linked 
 
 This structure allows for efficient insertion, retrieval, and removal of orders based on their price. The TreeMap provides a sorted structure for storing orders by their prices, and the LinkedList allows for quick insertion and removal of orders at a specific price level.
 
-What can be improved with this implementation: If we hold 2 maps, one for buy orders and one for sell orders, then we can retrieve the matching resting order more quickly. Also the removal of orders that have 0 volume remaining can be better. I remove orders in the way that it wouldn't trigger a iterator invalidation (and cause a ConcurrentModificationException), but it can be improved by using streams. I chose to not spend a lot of time investigating this further because the assignment prioritizes code clarity over performance. 
+What can be improved with this implementation: If we hold 2 maps, one for buy orders and one for sell orders, then we can retrieve the matching resting orders more quickly. Also the removal of orders that have 0 volume remaining can be better. I remove orders in the way that it wouldn't trigger an iterator invalidation (and cause a ConcurrentModificationException), but it can be improved by using streams. I chose to not spend a lot of time investigating this further because the assignment prioritizes code clarity over performance. 
 
 ## **** ATTENTION ****
 I didn't really understand the requested order book output template, so I implemented my own which resembles the industry standard price ladder representation of an order book.
