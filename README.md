@@ -6,7 +6,7 @@ If the aggressor order (incoming order) matches with any existing resting orders
 
 Our data structure of choice is `TreeMap<Double, LinkedList<Order>>`, and orders are matched using the price-time priority strategy.
 
-This means, we insert orders that don't have any match at the end of the linked list at the price level. This way, we guarantee that the first resting order we'll process will be the earliest inserted order at our matched price level (lowest ask price or highest bid price).
+This means, we insert orders that don't have any match (or the partially traded orders with volume > 0) at the end of the linked list at the price level. This way, we guarantee that the first resting order we'll process will be the earliest inserted order at our matched price level (lowest ask price or highest bid price).
 
 This structure allows for efficient insertion, retrieval, and removal of orders based on their price. The TreeMap provides a sorted structure for storing orders by their prices, and the LinkedList allows for quick insertion and removal of orders at a specific price level.
 
